@@ -29,12 +29,10 @@ const Navbar = ({ langContext, intl }) => {
       <hr />
       <div id="link_zone">
         {Pages.map((page) => {
-          const path = page.name === 'home'
-            ? '/'
-            : `/${CleanText(intl.formatMessage({ id: page.name }))}`;
+          const pagePart = page.name === 'home' ? '/' : `/${page.name}`;
           return (
             <p key={ShortID.generate()}>
-              <Link className="nav_link" to={path}>
+              <Link className="nav_link" to={pagePart}>
                 <FormattedMessage id={page.name} />
               </Link>
             </p>

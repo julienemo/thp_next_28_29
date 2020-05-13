@@ -16,7 +16,7 @@
 
 1. Default language is FR. On top right, there are 2 btns for the other 2 available languages. Hover shows indication, click changes site language.
 2. Last used language is save for next visit.
-3. Every language has its own URL
+3. All languages share a common url
 
 ---
 
@@ -29,6 +29,12 @@
 ---
 
 **Difficulties**
+
+1. in current setup, when changing language, url ooesn't change, messsage
+
+2. Didn't manage the url separation for languages. Coz when language changes, URL stays the same (can force replace in some cases) but page is empty
+
+3. So...if there is no `exact` in `Route` of `/`, you might have the content of `/` before the content of any page.
 
 ---
 

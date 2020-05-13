@@ -6,10 +6,7 @@ import { IntlProvider } from 'react-intl';
 
 import Navbar from './Components/Navbar';
 
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Works from './Pages/Works';
-import Page from './Pages/Page';
+import Page from './Components/Page';
 
 import Messages from './Constants/Messages';
 import Pages from './Constants/Pages';
@@ -44,17 +41,15 @@ const App = () => {
         <Router>
           <Navbar />
           <Switch>
-            <div className="page">
-              {
-                Pages.map((page) => {
-                  const path = page.name === 'home' ? '/' : `/${Messages[language][page.name]}`;
-                  return (
-                    <Route key={ShortID.generate()} exact path={path}>
-                      <Page pageIndex={page.name} />
-                    </Route>
-                  );
-                })
-              }
+            <div id="page">
+              {Pages.map((page) => {
+                const pagePart = page.name === 'home' ? '/' : `/${page.name}`;
+                return (
+                  <Route key={ShortID.generate()} exact path={pagePart}>
+                    <Page pageIndex={page.name} />
+                  </Route>
+                );
+              })}
             </div>
           </Switch>
         </Router>
