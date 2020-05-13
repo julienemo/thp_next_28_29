@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router, Route, Switch, Link,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { injectIntl, FormattedMessage } from 'react-intl';
 
 import Languages from '../Constants/Languages';
@@ -20,6 +18,7 @@ const Navbar = ({ langContext }) => (
         if (lang.lang !== langContext.language) {
           return <LangBtn key={ShortID.generate()} setting={lang} />;
         }
+        return '';
       })}
     </div>
     <p className="page_title">Webistic</p>

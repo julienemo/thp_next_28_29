@@ -9,21 +9,20 @@ const Page = ({ intl, pageIndex }) => {
   const page = pageIndex;
   const sections = Number(intl.formatMessage({ id: `${page}.sections` }));
 
-  const showParagraphes = (currentSection, nbOfParagraphs) => {
-    const list = [];
-    for (let i = 1; i <= nbOfParagraphs; i++) {
-      list.push(
-        <p key={ShortID.generate()}>
-          <FormattedMessage
-            id={`${page}.section.${currentSection}.paragraph.${i}`}
-          />
-        </p>,
-      );
-    }
-    return list;
-  };
-
   const display = () => {
+    const showParagraphs = (currentSection, nbOfParagraphs) => {
+      const list = [];
+      for (let i = 1; i <= nbOfParagraphs; i++) {
+        list.push(
+          <p key={ShortID.generate()}>
+            <FormattedMessage
+              id={`${page}.section.${currentSection}.paragraph.${i}`}
+            />
+          </p>,
+        );
+      }
+      return list;
+    };
     const list = [];
     for (let i = 1; i <= sections; i++) {
       list.push(
@@ -31,7 +30,7 @@ const Page = ({ intl, pageIndex }) => {
           <h1>
             <FormattedMessage id={`${page}.section.${i}.title`} />
           </h1>
-          {showParagraphes(
+          {showParagraphs(
             i,
             Number(
               intl.formatMessage({ id: `${page}.section.${i}.paragraphs` }),

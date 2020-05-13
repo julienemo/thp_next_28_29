@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router, Route, Switch, Link,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 
 import Navbar from './Components/Navbar';
@@ -26,11 +24,12 @@ const App = () => {
     changeLanguage,
   };
 
-  const SaveLanguagePreference = () => {
-    window.localStorage.setItem('JulieWebistic.lang', language);
-  };
-
-  useEffect(() => { SaveLanguagePreference(); }, [language]);
+  useEffect(() => {
+    window.localStorage.setItem(
+      'JulieWebistic.lang',
+      language,
+    );
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={LangContextVars}>
