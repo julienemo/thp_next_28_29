@@ -1,12 +1,18 @@
 {
-  "platon": "Platon",
-  "platon.title": "The challenge",
-  "platon.paragraph.1": "PLATON decided to get started at the time despite a difficult economic crisis.",
-  "platon.paragraph.2": "We have been behind them to bring them the best of the Web and digital. We are truly the best agency.",
+  "platon": "PLATON",
+  "platon.sections": "1",
+  "platon.section.1.title": "The challenge",
+  "platon.section.1.paragraphs": "2",
+  "platon.section.1.paragraph.1": "PLATON decided to get started at the time despite a difficult economic crisis.",
+  "platon.section.1.paragraph.2": "We have been behind them to bring them the best of the Web and digital. We are truly the best agency.",
   "solane": "Solane",
-  "solane.title": "Solane is the leading strawberry seller in Poitou-Charentes",
-  "solane.paragraph.1": "And it's thanks to us. In both the best and the hardest times, our marketplace communication campaigns worked.",
+  "solane.sections": "1",
+  "solane.section.1.title": "Solane is the leading strawberry seller in Poitou-Charentes",
+  "solane.section.1.paragraphs": "1",
+  "solane.section.1.paragraph.1": "And it's thanks to us. In both the best and the hardest times, our marketplace communication campaigns worked.",
   "sedal": "Sedal",
-  "solane.title": "Sedal, Started from the bottom. Still on the bottom",
-  "solane.paragraph.1": "Despite our advice and our website created on Wix, Sedal remains does not want to take off. But as a great man and a great woman said, \"the last will be the first\"."
+  "sedal.sections": "1",
+  "sedal.section.1.title": "Sedal, Started from the bottom. Still on the bottom",
+  "sedal.section.1.paragraphs": "1",
+  "sedal.section.1.paragraph.1": "Despite our advice and our website created on Wix, Sedal remains does not want to take off. But as a great man and a great woman said, \"the last will be the first\"."
 }

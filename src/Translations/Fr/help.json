@@ -1,1 +1,5 @@
-{ "button": "français", "target": "FR", "urlPath": "/FR" }
+{
+  "button": "français",
+  "target": "FR",
+  "to_case": "Lien vers l'étude."
+}

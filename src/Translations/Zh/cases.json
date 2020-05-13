@@ -1,12 +1,18 @@
 {
-  "platon": "Platon",
-  "platon.title": "迢迢牵牛星",
-  "platon.paragraph.1": "迢迢牵牛星，皎皎河汉女。纤纤擢素手，札札弄机杼。",
-  "platon.paragraph.2": "终日不成章，泣涕零如雨。河汉清且浅，相去复几许。盈盈一水间，脉脉不得语。",
+  "platon": "PLATON",
+  "platon.sections": "1",
+  "platon.section.1.title": "迢迢牵牛星",
+  "platon.section.1.paragraphs": "2",
+  "platon.section.1.paragraph.1": "迢迢牵牛星，皎皎河汉女。纤纤擢素手，札札弄机杼。",
+  "platon.section.1.paragraph.2": "终日不成章，泣涕零如雨。河汉清且浅，相去复几许。盈盈一水间，脉脉不得语。",
   "solane": "Solane",
-  "solane.title": "悠然心会，妙处难与君说",
-  "solane.paragraph.1": "应念岭表经年，孤光自照，肝胆皆冰雪。短发萧骚襟袖冷，稳泛沧溟空阔。尽挹西江，细斟北斗，万象为宾客。扣舷独啸，不知今夕何夕。",
+  "solane.sections": "1",
+  "solane.section.1.title": "悠然心会，妙处难与君说",
+  "solane.section.1.paragraphs": "1",
+  "solane.section.1.paragraph.1": "应念岭表经年，孤光自照，肝胆皆冰雪。短发萧骚襟袖冷，稳泛沧溟空阔。尽挹西江，细斟北斗，万象为宾客。扣舷独啸，不知今夕何夕。",
   "sedal": "Sedal",
-  "solane.title": "长桥卧波，未云何龙？复道行空，不霁何虹？",
-  "solane.paragraph.1": "荃不查余之中情兮，反信谗而齌怒。余固知謇謇之为患兮，忍而不能舍也。指九天以为正兮，夫唯灵脩之故也。曰黄昏以为期兮，羌中道而改路。"
+  "sedal.sections": "1",
+  "sedal.section.1.title": "长桥卧波，未云何龙？复道行空，不霁何虹？",
+  "sedal.section.1.paragraphs": "1",
+  "sedal.section.1.paragraph.1": "荃不查余之中情兮，反信谗而齌怒。余固知謇謇之为患兮，忍而不能舍也。指九天以为正兮，夫唯灵脩之故也。曰黄昏以为期兮，羌中道而改路。"
 }

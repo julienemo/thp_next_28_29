@@ -32,9 +32,11 @@
 
 1. in current setup, when changing language, url ooesn't change, messsage
 
-2. Didn't manage the url separation for languages. Coz when language changes, URL stays the same (can force replace in some cases) but page is empty
+2. Didn't manage the url separation for languages. Coz when language changes, URL stays the same (can force replace in some cases) but page is empty. Might be solved if used dynamic routing
 
 3. So...if there is no `exact` in `Route` of `/`, you might have the content of `/` before the content of any page.
+
+4. Wanted to use one single page component for home/about/work and the case studies. Blocked at the dynamic routing part: can I provide slug with a single format ?
 
 ---
 

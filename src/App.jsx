@@ -5,8 +5,8 @@ import {
 import { IntlProvider } from 'react-intl';
 
 import Navbar from './Components/Navbar';
-
 import Page from './Components/Page';
+import CasePage from './Components/CasePage';
 
 import Messages from './Constants/Messages';
 import Pages from './Constants/Pages';
@@ -18,7 +18,6 @@ const App = () => {
   const [language, setLanguage] = useState(initialLang);
 
   const changeLanguage = (targetLang) => {
-    console.log('in change lang from App');
     setLanguage(targetLang);
   };
 
@@ -33,24 +32,21 @@ const App = () => {
 
   useEffect(() => { SaveLanguagePreference(); }, [language]);
 
-  console.log('in app');
-
   return (
     <LanguageContext.Provider value={LangContextVars}>
       <IntlProvider locale={language} messages={Messages[language]}>
         <Router>
           <Navbar />
           <Switch>
-            <div id="page">
-              {Pages.map((page) => {
-                const pagePart = page.name === 'home' ? '/' : `/${page.name}`;
-                return (
-                  <Route key={ShortID.generate()} exact path={pagePart}>
-                    <Page pageIndex={page.name} />
-                  </Route>
-                );
-              })}
-            </div>
+            {Pages.map((page) => {
+              const pagePart = page.name === 'home' ? '/' : `/${page.name}`;
+              return (
+                <Route key={ShortID.generate()} exact path={pagePart}>
+                  <Page pageIndex={page.name} />
+                </Route>
+              );
+            })}
+            <Route path="/works/:caseSlug"><CasePage /></Route>
           </Switch>
         </Router>
       </IntlProvider>

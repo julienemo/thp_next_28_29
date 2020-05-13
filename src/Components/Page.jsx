@@ -1,20 +1,19 @@
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
+import CaseCard from './CaseCard';
 
 import ShortID from '../Constants/ShortID';
+import Cases from '../Constants/Cases';
 
 const Page = ({ intl, pageIndex }) => {
   const page = pageIndex;
-  console.log(`in page${page}`);
   const sections = Number(intl.formatMessage({ id: `${page}.sections` }));
-  console.log(sections);
 
   const showParagraphes = (currentSection, nbOfParagraphs) => {
     const list = [];
     for (let i = 1; i <= nbOfParagraphs; i++) {
-      console.log(`${page} section ${currentSection} par ${i}`);
       list.push(
-        <p key={ShortID.generate()} id={`${page} ${currentSection} ${i}`}>
+        <p key={ShortID.generate()}>
           <FormattedMessage
             id={`${page}.section.${currentSection}.paragraph.${i}`}
           />
@@ -27,10 +26,9 @@ const Page = ({ intl, pageIndex }) => {
   const display = () => {
     const list = [];
     for (let i = 1; i <= sections; i++) {
-      console.log(`${page} section ${i}`);
       list.push(
         <div key={ShortID.generate()}>
-          <h1 id={`${page} ${i}`}>
+          <h1>
             <FormattedMessage id={`${page}.section.${i}.title`} />
           </h1>
           {showParagraphes(
@@ -45,8 +43,24 @@ const Page = ({ intl, pageIndex }) => {
     return list;
   };
 
+  const ShowCaseCards = () => (
+    <>
+      {Cases.map((singlCase) => (
+        <div key={ShortID.generate()}>
+          <hr />
+          <CaseCard caseName={singlCase.name} />
+        </div>
+      ))}
+      <hr />
+    </>
+  );
 
-  return <div className={page}>{display()}</div>;
+  return (
+    <div className="page">
+      {display()}
+      {page === 'works' && ShowCaseCards()}
+    </div>
+  );
 };
 
 export default injectIntl(Page);
