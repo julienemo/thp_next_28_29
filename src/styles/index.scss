@@ -55,8 +55,31 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
 
-    #change_language {
+    .change_language {
+      text-align: center;
+      margin-left: 1rem;
       width: 4rem;
+      height: 4rem;
+
+      .lang_indication {
+        opacity: 0;
+        color: $primary_red;
+        font-weight: bolder;
+        visibility: hidden;
+        transition: opacity 0.2s;
+      }
+
+      &:hover .lang_indication {
+        visibility: visible;
+        opacity: 1;
+      }
+      &:hover .lang_flag {
+        display: none;
+        transition: display 0.2s, visibility 0.2s;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -64,6 +87,7 @@ nav {
     text-align: center;
     color: $primary_red;
     margin-bottom: 3rem;
+    font-size: 4rem;
   }
 
   #link_zone {
@@ -76,24 +100,9 @@ nav {
       text-decoration: none;
       position: relative;
       color: white;
-
-      &:after {
-        content: "";
-        height: 0.1em;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        background: white;
-        transition: 0.2s;
-      }
-      &:hover:after {
-        width: 100%;
-      }
     }
   }
 }
-
 // pages
 .text_zone {
   margin-top: 3rem;
