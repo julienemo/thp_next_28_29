@@ -10,12 +10,18 @@ const CaseCard = ({ ...caseName }) => {
   return (
     <div className="case_card">
       <h3 className="case_card_client">
+
         <FormattedMessage id={currentCase} />
+
       </h3>
       <p>
+        |
+        {' '}
         <Link to={`works/${createSlug(currentCase)}`}>
           <FormattedMessage id="to_case" />
         </Link>
+        {' '}
+        |
       </p>
     </div>
   );

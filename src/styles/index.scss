@@ -39,10 +39,10 @@ body {
   a {
     color: white;
     text-decoration: none;
-    padding-bottom: 0.3rem;
-
+    padding: 1rem 3rem;
     &:hover {
       color: $primary_red !important;
+      cursor: pointer;
     }
   }
 }
@@ -139,6 +139,10 @@ nav {
   h3,
   p {
     width: 40%;
+  }
+
+  .case_card_client {
+    color: $primary_red;
   }
 }
 

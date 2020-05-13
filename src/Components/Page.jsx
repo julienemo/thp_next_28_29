@@ -47,11 +47,9 @@ const Page = ({ intl, pageIndex }) => {
     <>
       {Cases.map((singlCase) => (
         <div key={ShortID.generate()}>
-          <hr />
           <CaseCard caseName={singlCase.name} />
         </div>
       ))}
-      <hr />
     </>
   );
 

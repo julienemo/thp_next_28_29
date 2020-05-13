@@ -29,9 +29,13 @@ const Navbar = ({ langContext }) => (
         const pagePart = page.name === 'home' ? '/' : `/${page.name}`;
         return (
           <p key={ShortID.generate()}>
+            |
+            {' '}
             <Link className="nav_link" to={pagePart}>
               <FormattedMessage id={page.name} />
             </Link>
+            {' '}
+            |
           </p>
         );
       })}
