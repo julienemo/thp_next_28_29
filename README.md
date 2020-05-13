@@ -16,6 +16,7 @@
 
 1. Default language is FR. On top right, there are 2 btns for the other 2 available languages. Hover shows indication, click changes site language.
 2. Last used language is save for next visit.
+3. Every language has its own URL
 
 ---
 

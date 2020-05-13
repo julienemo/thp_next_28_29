@@ -2,17 +2,19 @@ import React from 'react';
 import {
   BrowserRouter as Router, Route, Switch, Link,
 } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
 import Languages from '../Constants/Languages';
+import Pages from '../Constants/Pages';
 import ShortID from '../Constants/ShortID';
+import CleanText from '../Constants/CleanText';
 
 import LangBtn from './LangBtn';
 
 import { withLanguage } from '../Constants/LanguageContext';
 
 
-const Navbar = ({ langContext }) => {
+const Navbar = ({ langContext, intl }) => {
   console.log('in nav');
   return (
     <nav>
@@ -23,33 +25,25 @@ const Navbar = ({ langContext }) => {
           }
         })}
       </div>
-      <h1>Webistic</h1>
+      <p className="page_title">Webistic</p>
       <hr />
-
       <div id="link_zone">
-        <p>
-
-          <Link className="internal" to="/">
-            <FormattedMessage id="home" />
-          </Link>
-        </p>
-        <p>
-
-          <Link className="internal" to="/about">
-            <FormattedMessage id="about" />
-          </Link>
-        </p>
-
-        <p>
-
-          <Link className="internal" to="/works">
-            <FormattedMessage id="works" />
-          </Link>
-        </p>
+        {Pages.map((page) => {
+          const path = page.name === 'home'
+            ? '/'
+            : `/${CleanText(intl.formatMessage({ id: page.name }))}`;
+          return (
+            <p key={ShortID.generate()}>
+              <Link className="nav_link" to={path}>
+                <FormattedMessage id={page.name} />
+              </Link>
+            </p>
+          );
+        })}
       </div>
       <hr />
     </nav>
   );
 };
 
-export default withLanguage(Navbar);
+export default injectIntl(withLanguage(Navbar));

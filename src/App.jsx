@@ -9,8 +9,11 @@ import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Works from './Pages/Works';
+import Page from './Pages/Page';
 
 import Messages from './Constants/Messages';
+import Pages from './Constants/Pages';
+import ShortID from './Constants/ShortID';
 import LanguageContext from './Constants/LanguageContext';
 
 const App = () => {
@@ -41,15 +44,18 @@ const App = () => {
         <Router>
           <Navbar />
           <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/works">
-              <Works />
-            </Route>
+            <div className="page">
+              {
+                Pages.map((page) => {
+                  const path = page.name === 'home' ? '/' : `/${Messages[language][page.name]}`;
+                  return (
+                    <Route key={ShortID.generate()} exact path={path}>
+                      <Page pageIndex={page.name} />
+                    </Route>
+                  );
+                })
+              }
+            </div>
           </Switch>
         </Router>
       </IntlProvider>

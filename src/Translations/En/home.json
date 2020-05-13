@@ -1,6 +1,8 @@
 {
   "home": "HOME",
-  "home.title": "Entrust your dreams to web experts",
-  "home.paragraph.1": "Thanks to our know-how, our experience and our listening, we support our clients in the creation of website: study, UX, conception, design, development, SEO.",
-  "home.paragraph.2": "Our web agency is able to meet all your needs and develop a real digital strategy."
+  "home.sections": "1",
+  "home.section.1.title": "Entrust your dreams to web experts",
+  "home.section.1.paragraphs": "2",
+  "home.section.1.paragraph.1": "Thanks to our know-how, our experience and our listening, we support our clients in the creation of website: study, UX, conception, design, development, SEO.",
+  "home.section.1.paragraph.2": "Our web agency is able to meet all your needs and develop a real digital strategy."
 }

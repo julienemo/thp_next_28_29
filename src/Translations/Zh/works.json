@@ -1,5 +1,7 @@
 {
   "works": "客户案例",
-  "works.title": "学而时习之，不亦说乎？",
-  "works.paragraph.1": "有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？"
+  "works.sections": "1",
+  "works.section.1.title": "学而时习之，不亦说乎？",
+  "works.section.1.paragraphs": "1",
+  "works.section.1.paragraph.1": "有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？"
 }

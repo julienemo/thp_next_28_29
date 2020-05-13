@@ -1,5 +1,7 @@
 {
   "works": "WORKS",
-  "works.title": "Over the years, we have been able to support the best.",
-  "works.paragraph.1": "Find out step by step how we were there to launch your favorite brands."
+  "works.sections": "1",
+  "works.section.1.title": "Over the years, we have been able to support the best.",
+  "works.section.1.paragraphs": "1",
+  "works.section.1.paragraph.1": "Find out step by step how we were there to launch your favorite brands."
 }

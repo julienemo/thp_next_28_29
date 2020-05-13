@@ -1,5 +1,7 @@
 {
   "works": "PROJETS",
-  "works.title": "Au fil des années, nous avons pu accompagner les meilleurs.",
-  "works.paragraph.1": "Découvrez pas à pas comment nous avons été présent pour lancer vos marques préférées."
+  "works.sections": "1",
+  "works.section.1.title": "Au fil des années, nous avons pu accompagner les meilleurs.",
+  "works.section.1.paragraphs": "1",
+  "works.section.1.paragraph.1": "Découvrez pas à pas comment nous avons été présent pour lancer vos marques préférées."
 }

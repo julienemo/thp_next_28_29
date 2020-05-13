@@ -1,6 +1,8 @@
 {
   "about": "ABOUT",
-  "about.title": "Websitic is a digital communication agency in Paris whose mission is to support you on your digital projects.",
-  "about.paragraph.1": "From the preliminary web project stage to the actual launch of the site, we are there for you. Throughout the life of our joint projects, we make every effort to offer you effective digital strategies and allow you to reach your goals.",
-  "about.paragraph.2": "Leave your project in trustworthy hands, having accompanied \"PLATON\", \"TCar\", \"Solane\" or even \"Sedal\" to the top."
+  "about.sections": "1",
+  "about.section.1.title": "Websitic is a digital communication agency in Paris whose mission is to support you on your digital projects.",
+  "about.section.1.paragraphs": "2",
+  "about.section.1.paragraph.1": "From the preliminary web project stage to the actual launch of the site, we are there for you. Throughout the life of our joint projects, we make every effort to offer you effective digital strategies and allow you to reach your goals.",
+  "about.section.1.paragraph.2": "Leave your project in trustworthy hands, having accompanied \"PLATON\", \"TCar\", \"Solane\" or even \"Sedal\" to the top."
 }
