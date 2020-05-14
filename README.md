@@ -17,6 +17,15 @@ _There is no github page version for this page._
 1. Default language is FR. On top right, there are 2 btns for the other 2 available languages. Hover shows indication, click changes site language.
 2. Last used language is saved for next visit.
 3. All languages share a common url on the same page
+4. Click on navbar links to see 3 main pages
+5. Click on link of `works` page for separated cases
+
+**Other disclosures**
+
+1. all pages except for home is render with exactly the same component.
+2. Can handle cases where translation doesn't fil the original in terms of number of sections or paragraphs. But CSS is always the same: a `h3` and a `p`
+3. To add translations, pages and case, only need to 1) add jsons in `Translations`, add language flag in `images`, add language in `index.jsx`, add corresponding items in `Constants`. Everthing else is done by iteration.
+4. It is SLOW
 
 ---
 
@@ -26,7 +35,7 @@ _There is no github page version for this page._
 
 2. Closing a tab or a page won't trigger `unmount` hook. Things are interrupted so no way of doing anything. To save the "last" language preference, I actually had to save it every time it changes.
 
-3. So...if there is no `exact` in `Route` of `/`, you might have the content of `/` before the content of any page.
+3. So...if there is no `exact` in `Route` of `/`, you might have the content of `/` before the content of any page. Exact means exact: the path will be "root + what you write", elimination any possible existing url params.
 
 4. Oh my god why are there footers in the world ?
 
@@ -35,30 +44,19 @@ _There is no github page version for this page._
 
 5. If there are things I only do in useEffect, I shall avoid defining it outside of the effect, so that not to trigger warning.
 
+6. Seems that `/` path doesn't get to use dynamic routing coz slug is `undefined`. It is possible to add optional slugs (after something that is sure to exist but before nothing else) by adding `:optionalSlug?`
+
 ---
 
 **Difficulties**
 
-1. in current setup, when changing language, url ooesn't change, messsage
-
-2. Didn't manage the url separation for languages.
+1. Didn't manage the url separation for languages.
 
 - quite easy to have a separated Url that updates but page wouldn't fill
 - language changes, URL stays the same
-- can force page recharge by assigning a `key={currentLanguage}` to fill content
-- can force URL to change by replacing language basename in `window.location.href` BUT English is tricky coz it doesn't have a language basename.
-- Wouldn't need to force recharge if used dynamic routing with `:pageSlug` but home page doesn't have a slug (moreoever when it's in other languages the slug isn't what we really want)
-- Would have put home as a separated component but the case pages are a mess in dynamic routing
+- did try out dynamic routing and language basename for every page. Now when I change the lang with a btn, URL is still the same. If I change manually the url and even refresh, the content doesn't change
+- `react-router-dom` has a `useHistory` option. But it does not give access to the lang basename.
 - .........
-
-3. Wanted to use one single page component for home/about/work and the case studies. Blocked at the dynamic routing part: can I provide slug with a single format ?
-
-4. Didn't manage to push on GH page because
-
-- routing uses `/`, meaning it can't work where the url contains another slash
-- gh pages normally already contains a slash (`/repo_name`)
-- tried to push to the repo that normally gets shown as default, deploy throws no error but page shows `README` instead of the page
-- deploy also changes local port.....
 
 ---
 

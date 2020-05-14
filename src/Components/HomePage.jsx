@@ -40,7 +40,7 @@ const HomePage = ({ intl }) => {
   };
 
   return (
-    <div className="home page">
+    <div id="page">
       {display()}
     </div>
   );

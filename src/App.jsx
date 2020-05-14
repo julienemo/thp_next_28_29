@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, useIntl } from 'react-intl';
 
 import Navbar from './Components/Navbar';
 import HomePage from './Components/HomePage';
-import MainPage from './Components/MainPage';
-import CasePage from './Components/CasePage';
+import Page from './Components/Page';
 
 import Messages from './Constants/Messages';
-import Pages from './Constants/Pages';
-import ShortID from './Constants/ShortID';
 import LanguageContext from './Constants/LanguageContext';
 
 const App = () => {
@@ -38,18 +35,8 @@ const App = () => {
         <Router>
           <Navbar />
           <Switch>
-            {Pages.map((page) => {
-              if (page !== 'home') {
-                return (
-                  <Route key={ShortID.generate()} exact path={`/${page.name}`}>
-                    <MainPage pageIndex={page.name} />
-                  </Route>
-                );
-              }
-              return '';
-            })}
-            <Route path="/works/:caseSlug">
-              <CasePage />
+            <Route exact path="/:pageSlug/:caseSlug?">
+              <Page />
             </Route>
             <Route path="/">
               <HomePage />
