@@ -5,7 +5,7 @@ import CaseCard from './CaseCard';
 import ShortID from '../Constants/ShortID';
 import Cases from '../Constants/Cases';
 
-const Page = ({ intl, pageIndex }) => {
+const MainPage = ({ intl, pageIndex }) => {
   const page = pageIndex;
   const sections = Number(intl.formatMessage({ id: `${page}.sections` }));
 
@@ -60,4 +60,4 @@ const Page = ({ intl, pageIndex }) => {
   );
 };
 
-export default injectIntl(Page);
+export default injectIntl(MainPage);

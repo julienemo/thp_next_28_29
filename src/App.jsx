@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 
 import Navbar from './Components/Navbar';
-import Page from './Components/Page';
+import HomePage from './Components/HomePage';
+import MainPage from './Components/MainPage';
 import CasePage from './Components/CasePage';
 
 import Messages from './Constants/Messages';
@@ -38,14 +39,21 @@ const App = () => {
           <Navbar />
           <Switch>
             {Pages.map((page) => {
-              const pagePart = page.name === 'home' ? '/' : `/${page.name}`;
-              return (
-                <Route key={ShortID.generate()} exact path={pagePart}>
-                  <Page pageIndex={page.name} />
-                </Route>
-              );
+              if (page !== 'home') {
+                return (
+                  <Route key={ShortID.generate()} exact path={`/${page.name}`}>
+                    <MainPage pageIndex={page.name} />
+                  </Route>
+                );
+              }
+              return '';
             })}
-            <Route path="/works/:caseSlug"><CasePage /></Route>
+            <Route path="/works/:caseSlug">
+              <CasePage />
+            </Route>
+            <Route path="/">
+              <HomePage />
+            </Route>
           </Switch>
         </Router>
       </IntlProvider>

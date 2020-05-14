@@ -24,19 +24,30 @@ const Navbar = ({ langContext }) => (
     <p className="page_title">Webistic</p>
     <hr />
     <div id="link_zone">
+      <p key={ShortID.generate()}>
+        |
+        {' '}
+        <Link className="nav_link" to="/">
+          <FormattedMessage id="home" />
+        </Link>
+        {' '}
+        |
+      </p>
       {Pages.map((page) => {
-        const pagePart = page.name === 'home' ? '/' : `/${page.name}`;
-        return (
-          <p key={ShortID.generate()}>
-            |
-            {' '}
-            <Link className="nav_link" to={pagePart}>
-              <FormattedMessage id={page.name} />
-            </Link>
-            {' '}
-            |
-          </p>
-        );
+        if (page.name !== 'home') {
+          return (
+            <p key={ShortID.generate()}>
+              |
+              {' '}
+              <Link className="nav_link" to={`/${page.name}`}>
+                <FormattedMessage id={page.name} />
+              </Link>
+              {' '}
+              |
+            </p>
+          );
+        }
+        return '';
       })}
     </div>
     <hr />
