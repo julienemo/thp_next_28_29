@@ -5,6 +5,7 @@ import { IntlProvider } from 'react-intl';
 import Navbar from './Components/Navbar';
 import Page from './Components/Page';
 import CasePage from './Components/CasePage';
+import Gallery from './Components/Gallery';
 
 import Messages from './Constants/Messages';
 import Pages from './Constants/Pages';
@@ -48,6 +49,7 @@ const App = () => {
             <Route path="/works/:caseSlug"><CasePage /></Route>
           </Switch>
         </Router>
+        <Gallery images={3} />
       </IntlProvider>
     </LanguageContext.Provider>
   );
