@@ -1,7 +1,6 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
-
+import { FormattedMessage } from 'react-intl';
 
 const CaseCard = ({ ...caseName }) => {
   const currentCase = caseName.caseName;
@@ -9,13 +8,13 @@ const CaseCard = ({ ...caseName }) => {
 
   return (
     <div className="case_card">
-      <h3 className="case_card_client">
+      <h3 className="case_card_el">
         <FormattedMessage id={`${currentCase}.section.1.title`} />
       </h3>
-      <p>
+      <p className="case_card_el">
         |
         {' '}
-        <Link exact to={`/works/${createSlug(currentCase)}`}>
+        <Link exact="true" to={`/works/${createSlug(currentCase)}`}>
           <FormattedMessage id="to_case" />
         </Link>
         {' '}

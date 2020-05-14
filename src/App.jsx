@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { IntlProvider, useIntl } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 import Navbar from './Components/Navbar';
-import HomePage from './Components/HomePage';
+import Home from './Components/Home';
 import Page from './Components/Page';
 
 import Messages from './Constants/Messages';
@@ -39,7 +39,7 @@ const App = () => {
               <Page />
             </Route>
             <Route path="/">
-              <HomePage />
+              <Home />
             </Route>
           </Switch>
         </Router>

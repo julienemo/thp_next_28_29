@@ -4,13 +4,7 @@
 
 ---
 
-**To see result**
-
-1. clone repo
-2. run `npm install`
-3. run `npm start`
-
-_There is no github page version for this page._
+**see demo [here](https://webistic-mockup.now.sh/)**
 
 **Page behaviour**
 
@@ -26,6 +20,7 @@ _There is no github page version for this page._
 2. Can handle cases where translation doesn't fil the original in terms of number of sections or paragraphs. But CSS is always the same: a `h3` and a `p`
 3. To add translations, pages and case, only need to 1) add jsons in `Translations`, add language flag in `images`, add language in `index.jsx`, add corresponding items in `Constants`. Everthing else is done by iteration.
 4. It is SLOW
+5. the `.env` is not ignored because, really, there is nothing sensitive
 
 ---
 
@@ -46,6 +41,8 @@ _There is no github page version for this page._
 
 6. Seems that `/` path doesn't get to use dynamic routing coz slug is `undefined`. It is possible to add optional slugs (after something that is sure to exist but before nothing else) by adding `:optionalSlug?`
 
+7. There is a guide to deploy on `now.sh` [here](https://coursework.vschool.io/deploying-with-now/), just that the npm package and the command are now "vercel" instead of "now"
+
 ---
 
 **Difficulties**
@@ -57,6 +54,8 @@ _There is no github page version for this page._
 - did try out dynamic routing and language basename for every page. Now when I change the lang with a btn, URL is still the same. If I change manually the url and even refresh, the content doesn't change
 - `react-router-dom` has a `useHistory` option. But it does not give access to the lang basename.
 - .........
+
+2. hmmm at this time, type `/whatever/a-valid-case-study` will lead you to the case page...
 
 ---
 

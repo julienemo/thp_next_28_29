@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { injectIntl, FormattedMessage } from 'react-intl';
 
+import { withLanguage } from '../Constants/LanguageContext';
 import Languages from '../Constants/Languages';
 import Pages from '../Constants/Pages';
 import ShortID from '../Constants/ShortID';
 
 import LangBtn from './LangBtn';
-
-import { withLanguage } from '../Constants/LanguageContext';
 
 
 const Navbar = ({ langContext }) => (
