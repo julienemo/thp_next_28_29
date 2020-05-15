@@ -10,10 +10,12 @@ $default_spacing: 3rem;
 }
 
 // general
+
+html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 97vh;
   position: relative;
   color: white !important;
   background-color: $background_gray;
@@ -63,8 +65,14 @@ body {
     font-size: larger;
   }
 
+  #wrapper {
+    min-height: 100%;
+    position: relative;
+  }
+
   #root {
-    min-height: 40rem;
+    min-height: 100%;
+    padding-bottom: 5rem;
 
     a {
       padding: 1rem $default_spacing;
@@ -148,8 +156,13 @@ nav {
 }
 
 // footer
-footer {
-  position: relative;
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   height: 5rem;
-  margin: 0 $default_spacing -10rem $default_spacing;
+
+  #footer_content {
+    padding: 0 $default_spacing;
+  }
 }

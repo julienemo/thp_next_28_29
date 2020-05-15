@@ -19,7 +19,7 @@
 1. all pages except for home is render with exactly the same component.
 2. Can handle cases where translation doesn't fil the original in terms of number of sections or paragraphs. But CSS is always the same: a `h3` and a `p`
 3. To add translations, pages and case, only need to 1) add jsons in `Translations`, add language flag in `images`, add language in `index.jsx`, add corresponding items in `Constants`. Everthing else is done by iteration.
-4. It is SLOW
+4. It is SLOW on localhost (I imagine given all the iterations) but now.sh seems to be OK
 5. the `.env` is not ignored because, really, there is nothing sensitive
 
 ---
@@ -42,6 +42,8 @@
 6. Seems that `/` path doesn't get to use dynamic routing coz slug is `undefined`. It is possible to add optional slugs (after something that is sure to exist but before nothing else) by adding `:optionalSlug?`
 
 7. There is a guide to deploy on `now.sh` [here](https://coursework.vschool.io/deploying-with-now/), just that the npm package and the command are now "vercel" instead of "now"
+
+8. To have a docile footer that always sticks to the bottom, see (here)[https://matthewjamestaylor.com/bottom-footer] (I kinda feel that the essential is not using `<footer>` but `<div id="footer"/>`)
 
 ---
 
